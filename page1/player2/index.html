@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Loona Sound Player</title>
+    <!-- Load FontAwesome icons -->
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> 
+    <!-- Custom CSS style file -->
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <!-- Korean encoding -->
+    <meta charset="utf-8">
+    <!-- Robot -->
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <div class="player">
+        <!-- Display details -->
+        <div class="details">
+            <div class="now-playing">PLAYING x of y</div>
+            <div class="track-art"></div>
+            <div class="track-name">Track Name</div>
+        </div>
+
+        <!--Display track buttons-->
+        <div class="buttons">
+            <div class="prev-track" onclick="prevTrack()">
+                <i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div class="playpause-track" onclick="playpauseTrack()">
+                <i class="fa fa-play-circle fa-5x"></i>
+            </div>
+            <div class="next-track" onclick="nextTrack()">
+                <i class="fa fa-step-forward fa-2x"></i>
+            </div>
+        </div>
+
+        <!-- Display seek slider -->
+        <div class="slider_container">
+            <div class="current-time">00:00</div>
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()"> 
+            <div class="total-duration">00:00</div>
+        </div>
+        
+        <!-- Display volume slider-->
+        <div class="slider_container"> 
+            <i class="fa fa-volume-down"></i> 
+            <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()"> 
+            <i class="fa fa-volume-up"></i> 
+        </div>
+
+        <!-- Main script for the player -->
+        <script src="main.js"></script>
+    </div>
+</body>
+</html>

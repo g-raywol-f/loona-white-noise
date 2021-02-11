@@ -1,0 +1,38 @@
+html, body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* height: 100%; */
+    padding: 0;
+}
+
+body {
+    background-color: lightgray; 
+    /* Smoothly transition the background color */
+    transition: background-color .5s; 
+}
+
+button {
+    display: inline;
+    border: 0px;
+    margin: 10px;
+    height: 50%;
+    width: 50%;
+    font-size: 40px;
+    color: #444;
+    background-color: #EEE;
+    font-family: Monospace;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    height: 300px;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    margin-top: -110px;
+    margin-left: -400px;
+}
